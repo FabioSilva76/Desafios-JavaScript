@@ -8,13 +8,18 @@
 </head>
 <body>
     <h1> Ano Bissexto</h1>
-    <input type="button" value="Verificar" onclick="verificar">
     <input type="number" id="ano" placeholder="Digite um ano ">
+    <input type="button" value="Verificar" onclick="verificar">
+    
     <p>Informe um ano para saber se ele é bissexto!</p>
 
     <script>
-
-        console.log("Digite o número de um Ano")
+        var ano= document.getElementById('ano')
+        var res= ano
+        
+        function verificar(){
+       document.write(`${res}`)
+        }
     </script>
 </body>
 </html>
