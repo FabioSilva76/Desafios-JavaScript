@@ -8,18 +8,23 @@
 </head>
 <body>
     <h1> Ano Bissexto</h1>
-    <input type="number" id="ano" placeholder="Digite um ano ">
-    <input type="button" value="Verificar" onclick="verificar">
+    <input type="number" name="ano" id="ano" placeholder="Digite um ano ">
+    <input type="button" value="Verificar" onclick="verificar"()>
     
     <p>Informe um ano para saber se ele é bissexto!</p>
 
     <script>
-        var ano= document.getElementById('ano')
-        var res= ano
-        
-        function verificar(){
-       document.write(`${res}`)
-        }
+          var a= (Number.document.getElementById(ano))
+         // var soma= ano  
+          function verificar(){
+
+          if (a/4 ==0 && a/100 !=0 || a/400 ==0){
+              soma.innerHTML(` O ano ${ano} é Bissexto!`)
+            } 
+            else {
+              soma.innerHTML(` O ano ${ano} não é Bissexto!`)
+          }
+        }    
     </script>
 </body>
 </html>
