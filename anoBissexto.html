@@ -6,30 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ano Bissexto</title>
 </head>
+<style>
+    body{
+        background-color: rgba(255, 217, 0, 0.534);
+        text-align: center;
+    }
+    fieldset{
+        background-color: antiquewhite;
+        margin-left: 500px;
+        margin-top: 200px;
+        width: 300px;
+    }
+    input{
+        margin-top: 10px;
+    }
+</style>
 <body>
+    <fieldset>
     <h1> Ano Bissexto</h1>
-    <input type="number" name="ano" id="ano" placeholder="Digite um ano ">
+
+    <input type="number" name="ano" id="ano" placeholder="Digite um ano " onfocus="this.value='';">
     <input type="button" value="Verificar" onclick="verificar()">
     
     <p>Informe um ano para saber se ele é bissexto!</p>
 <div id='res'>
-
+</fieldset>
 </div>
     <script>
-            var ano1= document.getElementById("ano")
-            var a= Number(ano1.value)
-            var b= Number(ano1.value)
-            var c= Number(ano1.value)
-            var res= document.getElementById('res')
-            var s= a % 4  && b % 100  || c % 400
+            
 
-        function verificar(){          
+        function verificar(){  
+            var ano= Number(document.getElementById('ano').value)
+            var res= document.getElementById('res')        
 
-          if (a ==0 && b !=0 || c ==0){ 
-             res.innerHTML=` O ano ${s} é Bissexto!`
-            } 
+          if (ano%400 == 0){ 
+             res.innerHTML=` O ano ${ano} é Bissexto!`
+             res.style.background= 'green'
+            } else
+             if (ano%4 == 0 && ano%100 != 0 ){
+             res.innerHTML= `O ano ${ano} é Bissexto!`
+             res.style.background= 'green'
+            }
             else {
-             res.innerHTML=` O ano ${s}} não é Bissexto!`
+             res.innerHTML=` O ano ${ano} não é Bissexto!`
+             res.style.background= 'red'
           }
         }    
     </script>
