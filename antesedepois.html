@@ -9,15 +9,23 @@
 <body>
     <H1>Antes e Depois!</H1>
 
-    <input type="number" id="num" placeholder="Digite um número">
-    <input type="button" value="verificar" onclick="verificar()">
+    <input type="number" id="num" placeholder="Digite um número" onfocus="this.value='';">
+    <input type="button" value="verificar" onclick="verificar()" >
+<div id="res">
 
+</div>
 
     <script>
         function verificar(){
 
             var num= Number(document.getElementById('num'))
             var res= document.getElementById('res')
+            //var a = ++a
+          
+            res.innerHTML= `Antes de ${num}, Temos o número ${num}`
+            res.innerHTML= `Depois de ${}, Temos o número ${}`
+
+            
 
 
         }
