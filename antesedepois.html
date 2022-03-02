@@ -17,13 +17,10 @@
 
     <script>
         function verificar(){
-
-            var num= Number(document.getElementById('num'))
-            var res= document.getElementById('res')
-            //var a = ++a
-          
-            res.innerHTML= `Antes de ${num}, Temos o número ${num}`
-            res.innerHTML= `Depois de ${}, Temos o número ${}`
+            var num1= Number.parseFloat(document.getElementById('num'))
+            var res= document.getElementById('res')         
+            res.innerHTML= `Antes de ${num}, Temos o número ${num1--}`
+            res.innerHTML= `Depois de ${num}, Temos o número ${num1++}`
 
             
 
